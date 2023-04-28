@@ -9,15 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="feat: Animal Implementation">
+    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="fix: Pet Updates">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Atendimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/AtendimentoResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/AtendimentoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/AtendimentoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/AnimalResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/PetResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/DonoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/DonoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/AnimalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/PetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/DonoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/DonoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/PetRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682652796740</updated>
       <workItem from="1682652798089" duration="5230000" />
-      <workItem from="1682711977533" duration="1273000" />
+      <workItem from="1682711977533" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initial Code Base">
       <created>1682654209703</created>
@@ -136,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682657055705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: Pet Updates">
+      <created>1682713909166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682713909166</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +162,7 @@
     <MESSAGE value="feat: Initial Code Base" />
     <MESSAGE value="feat: Dono Implementation" />
     <MESSAGE value="feat: Animal Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Animal Implementation" />
+    <MESSAGE value="fix: Pet Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Pet Updates" />
   </component>
 </project>
