@@ -9,29 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="feat: Initial Code Base">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/PetDoguiApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Dono.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/ErroValidacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Servico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/enums/GeneroEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/enums/PorteEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/DonoResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/ServicosResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/DonoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/ServicoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/DonoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/ServicoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/utils/ConnectionFactory.java" afterDir="false" />
+    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="feat: Dono Implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/AnimalResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/AnimalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/AnimalRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/HelloResource.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682652796740</updated>
-      <workItem from="1682652798089" duration="3637000" />
+      <workItem from="1682652798089" duration="4235000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initial Code Base">
       <created>1682654209703</created>
@@ -135,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682654209703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Dono Implementation">
+      <created>1682656470856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682656470856</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +144,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Initial Code Base" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Initial Code Base" />
+    <MESSAGE value="feat: Dono Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Dono Implementation" />
   </component>
 </project>
