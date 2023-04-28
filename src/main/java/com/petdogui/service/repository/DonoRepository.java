@@ -1,4 +1,4 @@
-package com.petdogui.repository;
+package com.petdogui.service.repository;
 
 import com.petdogui.model.Dono;
 

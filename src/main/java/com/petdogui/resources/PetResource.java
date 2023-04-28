@@ -1,8 +1,8 @@
 package com.petdogui.resources;
 
-import com.petdogui.model.Animal;
 import com.petdogui.model.ErroValidacao;
-import com.petdogui.service.AnimalService;
+import com.petdogui.model.Pet;
+import com.petdogui.service.PetService;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -14,16 +14,16 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("animal")
-public class AnimalResource {
+@Path("pet")
+public class PetResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response insert(Animal animal) {
+    public Response insert(Pet pet) {
         try {
-            AnimalService service = new AnimalService();
-            return Response.ok(service.insert(animal)).build();
+            PetService service = new PetService();
+            return Response.ok(service.insert(pet)).build();
         } catch (Exception ex) {
             return Response.serverError().entity(
                     new ErroValidacao(ex.getMessage())).build();
@@ -33,10 +33,10 @@ public class AnimalResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response update(Animal animal) {
+    public Response update(Pet pet) {
         try {
-            AnimalService service = new AnimalService();
-            return Response.ok(service.update(animal)).build();
+            PetService service = new PetService();
+            return Response.ok(service.update(pet)).build();
         } catch (Exception ex) {
             return Response.serverError().entity(
                     new ErroValidacao(ex.getMessage())).build();
@@ -47,7 +47,7 @@ public class AnimalResource {
     @Path("{id}")
     public Response delete(@PathParam("id") int id) {
         try {
-            AnimalService service = new AnimalService();
+            PetService service = new PetService();
             service.delete(id);
             return Response.ok().build();
         } catch (Exception ex) {
@@ -61,7 +61,7 @@ public class AnimalResource {
     @Path("{id}")
     public Response findById(@PathParam("id") int id) {
         try {
-            AnimalService service = new AnimalService();
+            PetService service = new PetService();
             return Response.ok(service.findById(id)).build();
         } catch (Exception ex) {
             return Response.serverError().entity(
@@ -73,7 +73,7 @@ public class AnimalResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response findAll() {
         try {
-            AnimalService service = new AnimalService();
+            PetService service = new PetService();
             return Response.ok(service.findAll()).build();
         } catch (Exception ex) {
             return Response.serverError().entity(

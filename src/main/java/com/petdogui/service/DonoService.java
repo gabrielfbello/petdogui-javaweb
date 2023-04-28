@@ -1,7 +1,7 @@
 package com.petdogui.service;
 
 import com.petdogui.model.Dono;
-import com.petdogui.repository.DonoRepository;
+import com.petdogui.service.repository.DonoRepository;
 
 import java.util.List;
 

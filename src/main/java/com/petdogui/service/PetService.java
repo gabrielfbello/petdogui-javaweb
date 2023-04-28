@@ -1,30 +1,30 @@
 package com.petdogui.service;
 
-import com.petdogui.model.Animal;
-import com.petdogui.repository.AnimalRepository;
+import com.petdogui.model.Pet;
+import com.petdogui.service.repository.PetRepository;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class AnimalService {
+public class PetService {
 
-    private final AnimalRepository repository;
+    private final PetRepository repository;
 
-    public AnimalService() {
-        this.repository = new AnimalRepository();
+    public PetService() {
+        this.repository = new PetRepository();
     }
 
-    public Animal insert(Animal animal) {
+    public Pet insert(Pet pet) {
         try {
-            return repository.insert(animal);
+            return repository.insert(pet);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public Animal update(Animal animal) {
+    public Pet update(Pet pet) {
         try {
-            return repository.update(animal);
+            return repository.update(pet);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -38,7 +38,7 @@ public class AnimalService {
         }
     }
 
-    public Animal findById(int id) {
+    public Pet findById(int id) {
         try {
             return repository.findById(id);
         } catch (SQLException e) {
@@ -46,7 +46,7 @@ public class AnimalService {
         }
     }
 
-    public List<Animal> findAll() {
+    public List<Pet> findAll() {
         try {
             return repository.findAll();
         } catch (SQLException e) {

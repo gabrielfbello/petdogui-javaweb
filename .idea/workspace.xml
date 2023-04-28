@@ -9,12 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="feat: Dono Implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/AnimalResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/AnimalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/AnimalRepository.java" afterDir="false" />
+    <list default="true" id="0329dbdf-d162-4bc2-b785-5a64859d274f" name="Changes" comment="feat: Animal Implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/AnimalResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/resources/PetResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/DonoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/DonoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/AnimalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/PetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/DonoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petdogui/service/repository/DonoRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.petdogui.service" />
@@ -109,7 +112,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682652796740</updated>
-      <workItem from="1682652798089" duration="4235000" />
+      <workItem from="1682652798089" duration="5230000" />
+      <workItem from="1682711977533" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initial Code Base">
       <created>1682654209703</created>
@@ -125,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682656470856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Animal Implementation">
+      <created>1682657055705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682657055705</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Initial Code Base" />
     <MESSAGE value="feat: Dono Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Dono Implementation" />
+    <MESSAGE value="feat: Animal Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Animal Implementation" />
   </component>
 </project>

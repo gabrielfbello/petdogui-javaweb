@@ -1,6 +1,8 @@
-package com.petdogui.repository;
+package com.petdogui.service.repository;
 
-import com.petdogui.model.Animal;
+import com.petdogui.model.Dono;
+import com.petdogui.model.Pet;
+import com.petdogui.service.repository.DonoRepository;
 import com.petdogui.utils.ConnectionFactory;
 
 import java.sql.Connection;
@@ -11,15 +13,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalRepository {
+public class PetRepository {
 
-    private static final String INSERT = "INSERT INTO animal (nome, idade, dono_id) VALUES(?, ?, ?);";
-    private static final String UPDATE = "UPDATE animal SET nome=?, idade=?, dono_id=? WHERE id=?;";
-    private static final String DELETE = "DELETE FROM animal WHERE id=?;";
-    private static final String FIND_BY_ID = "SELECT id, nome, idade, dono_id FROM animal WHERE id=?;";
-    private static final String FIND_ALL = "SELECT id, nome, idade, dono_id FROM animal;";
+    private static final String INSERT = "INSERT INTO pet (nome, dono_id) VALUES(?, ?);";
+    private static final String UPDATE = "UPDATE pet SET nome=?, dono_id=? WHERE id=?;";
+    private static final String DELETE = "DELETE FROM pet WHERE id=?;";
+    private static final String FIND_BY_ID = "SELECT id, nome, dono_id FROM pet WHERE id=?;";
+    private static final String FIND_ALL = "SELECT id, nome, dono_id FROM pet;";
 
-    public Animal insert(Animal animal) throws SQLException {
+    public Pet insert(Pet pet) throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -27,15 +29,14 @@ public class AnimalRepository {
         try {
             conn = new ConnectionFactory().getConnection();
             ps = conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, animal.getNome());
-            ps.setInt(2, animal.getIdade());
-            ps.setInt(3, animal.getDonoId());
+            ps.setString(1, pet.getNome());
+            ps.setInt(2, (int) pet.getDono().getId());
             ps.executeUpdate();
 
             rs = ps.getGeneratedKeys();
 
             if (rs.next()) {
-                animal.setId(rs.getInt(1));
+                pet.setId(rs.getInt(1));
             }
 
         } finally {
@@ -50,20 +51,19 @@ public class AnimalRepository {
             }
         }
 
-        return animal;
+        return pet;
     }
 
-    public Animal update(Animal animal) throws SQLException {
+    public Pet update(Pet pet) throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
 
         try {
             conn = new ConnectionFactory().getConnection();
             ps = conn.prepareStatement(UPDATE);
-            ps.setString(1, animal.getNome());
-            ps.setInt(2, animal.getIdade());
-            ps.setInt(3, animal.getDonoId());
-            ps.setInt(4, animal.getId());
+            ps.setString(1, pet.getNome());
+            ps.setInt(2, (int) pet.getDono().getId());
+            ps.setInt(3, pet.getId());
             ps.executeUpdate();
 
         } finally {
@@ -75,7 +75,7 @@ public class AnimalRepository {
             }
         }
 
-        return animal;
+        return pet;
     }
 
     public void delete(int id) throws SQLException {
@@ -98,11 +98,11 @@ public class AnimalRepository {
         }
     }
 
-    public Animal findById(int id) throws SQLException {
+    public Pet findById(int id) throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Animal animal = null;
+        Pet pet = null;
 
         try {
             conn = new ConnectionFactory().getConnection();
@@ -111,11 +111,10 @@ public class AnimalRepository {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                animal = new Animal();
-                animal.setId(rs.getInt("id"));
-                animal.setNome(rs.getString("nome"));
-                animal.setIdade(rs.getInt("idade"));
-                animal.setDonoId(rs.getInt("dono_id"));
+                pet = new Pet();
+                pet.setId(rs.getInt("id"));
+                pet.setNome(rs.getString("nome"));
+                // Retrieve and set the dono object using the dono_id from the result set
             }
 
         } finally {
@@ -130,14 +129,14 @@ public class AnimalRepository {
             }
         }
 
-        return animal;
+        return pet;
     }
 
-    public List<Animal> findAll() throws SQLException {
+    public List<Pet> findAll() throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        List<Animal> animals = new ArrayList<>();
+        List <Pet> pets = new ArrayList<>();
 
         try {
             conn = new ConnectionFactory().getConnection();
@@ -145,13 +144,17 @@ public class AnimalRepository {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                Animal animal = new Animal();
-                animal.setId(rs.getInt("id"));
-                animal.setNome(rs.getString("nome"));
-                animal.setIdade(rs.getInt("idade"));
-                animal.setDonoId(rs.getInt("dono_id"));
+                Pet pet = new Pet();
+                pet.setId(rs.getInt("id"));
+                pet.setNome(rs.getString("nome"));
 
-                animals.add(animal);
+                // Retrieve and set the dono object using the dono_id from the result set
+                int donoId = rs.getInt("dono_id");
+                DonoRepository donoRepository = new DonoRepository();
+                Dono dono = donoRepository.findById(donoId);
+                pet.setDono(dono);
+
+                pets.add(pet);
             }
 
         } finally {
@@ -166,6 +169,7 @@ public class AnimalRepository {
             }
         }
 
-        return animals;
+        return pets;
     }
 }
+
